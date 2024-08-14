@@ -12,7 +12,7 @@ const images = [
   '/product.png',
 ];
 
-export default function product() {
+export default function Product() {
   const [mainImage, setMainImage] = useState(images[0]);
 
   return (
