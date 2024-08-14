@@ -20,7 +20,6 @@ export default function Product() {
     <Navbar/>
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row">
-        {/* Image Section */}
         <div className="md:w-1/2">
           <div className="mb-4">
             <Image src={mainImage} alt="Watch" width={500} height={500} className="w-full" />
@@ -34,7 +33,6 @@ export default function Product() {
           </div>
         </div>
 
-        {/* Product Details Section */}
         <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
           <h1 className="text-3xl font-bold mb-4">Royal Oak Mini Frosted Gold Quartz</h1>
           <p className="text-gray-600 mb-4">
