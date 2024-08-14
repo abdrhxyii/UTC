@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* Mobile Sidebar Menu */}
       <div
-        className={`md:hidden bg-black text-white absolute top-0 left-0 w-64 h-full transform ${
+        className={`fixed inset-0 md:hidden bg-black text-white top-0 left-0 w-64 h-full transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
