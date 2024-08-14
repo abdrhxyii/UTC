@@ -36,7 +36,7 @@ export default function Product() {
         <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
           <h1 className="text-3xl font-bold mb-4">Royal Oak Mini Frosted Gold Quartz</h1>
           <p className="text-gray-600 mb-4">
-            Brighten up your wardrobe with our Women's A-Line Yellow Dress. This vibrant and trendy dress features a stunning A-line silhouette that cinches at the waist and flows out gracefully, creating a chic and elegant look. The sunny yellow hue adds a pop of color, perfect for summer outings or any event.
+          Brighten up your wardrobe with our Women&apos;s A-Line Yellow Dress. This vibrant and trendy dress features a stunning A-line silhouette that cinches at the waist and flows out gracefully, creating a chic and elegant look. The sunny yellow hue adds a pop of color, perfect for summer outings or any event.
           </p>
           <p className="text-2xl font-bold mb-4">LKR 23,000</p>
           <button className="bg-black text-white py-2 px-4 w-full mb-2">Add to cart</button>
