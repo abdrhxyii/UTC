@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaShoppingCart, FaSearch, FaBars } from "react-icons/fa";
-import { ShoppingCart, User, Search  } from 'lucide-react';
+import { ShoppingCart, User, Search, Menu } from 'lucide-react';
+import Cart from "./Cart";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +27,7 @@ export default function Navbar() {
 
           {/* Hamburger Menu for Mobile */}
           <div className="md:hidden">
-            <FaBars
-              className="text-xl cursor-pointer"
-              onClick={() => setIsOpen(!isOpen)}
-            />
+            <Menu onClick={() => setIsOpen(!isOpen)}/>
           </div>
         </div>
       </div>
