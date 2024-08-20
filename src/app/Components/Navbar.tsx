@@ -3,7 +3,7 @@ import { FaUser, FaShoppingCart, FaSearch, FaBars } from "react-icons/fa";
 import { ShoppingCart, User, Search, Menu } from 'lucide-react';
 // import Cart from "../Pages/Cart";
 import { useRouter } from "next/navigation";
-import Cart from "./cart";
+import Cart from "./Cart";
 
 export default function Navbar() {
   const [isCartOpen, setCartOpen] = useState(false);

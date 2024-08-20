@@ -1,9 +1,8 @@
 "use client";
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Trash2, X } from 'lucide-react'
 
-export default function ({ onClose }: any) {
+export default function Cart ({ onClose }: any) {
   return (
     <div className="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white shadow-lg z-50">
       <div className="flex justify-between items-center p-4 border-b">
