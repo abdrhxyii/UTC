@@ -1,59 +1,48 @@
-import { useState } from "react";
-import { X } from 'lucide-react';
+"use client";
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { Trash2, X } from 'lucide-react'
 
-export default function Cart() {
-    const [isCartOpen, setIsCartOpen] = useState(false);
-
-    const cartItems = [
-        { name: "Royal Oak Mini Frosted Gold Quartz", price: 20000, quantity: 1 },
-        { name: "Royal Oak Mini Frosted Gold Quartz", price: 20000, quantity: 1 },
-        { name: "Royal Oak Mini Frosted Gold Quartz", price: 20000, quantity: 1 },
-    ];
-
-    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+export default function ({ onClose }: any) {
   return (
-    <div>
-    <div
-        className={`fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity ${
-          isCartOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={() => setIsCartOpen(false)}
-      >
-        <div
-          className={`fixed inset-y-0 right-0 max-w-full w-full sm:w-96 bg-white shadow-xl transform ${
-            isCartOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out`}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="flex justify-between items-center p-4 border-b">
-            <h2 className="text-lg font-semibold">Your Cart</h2>
-            <X onClick={() => setIsCartOpen(false)} className="cursor-pointer" />
-          </div>
-          <div className="p-4 overflow-y-auto h-full">
-            {cartItems.map((item, index) => (
-              <div key={index} className="mb-4 pb-4 border-b">
-                <p className="font-semibold">{item.name}</p>
-                <p className="text-sm text-gray-600">1 * LKR {item.price.toLocaleString()}</p>
-              </div>
-            ))}
-          </div>
-          <div className="p-4 border-t">
-            <div className="flex justify-between mb-4">
-              <span className="font-semibold">Sub Total:</span>
-              <span>LKR {totalPrice.toLocaleString()}</span>
+    <div className="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white shadow-lg z-50">
+      <div className="flex justify-between items-center p-4 border-b">
+        <h2 className="text-xl font-semibold">Your Cart</h2>
+        <X className="cursor-pointer" onClick={onClose} />
+      </div>
+      <div className="p-4 space-y-4 overflow-y-auto">
+        {Array.from({ length: 3 }).map((_, idx) => (
+          <div
+            key={idx}
+            className="flex items-center p-4 bg-gray-100 rounded-lg shadow"
+          >
+            <Image src="/product.png" alt="Product Image" width={60} height={60} />
+            <div className="ml-4 flex-1">
+              <h3 className="font-semibold">Royal Oak Mini Frosted Gold Quartz</h3>
+              <p className="text-sm text-gray-500">Audemars Piguet</p>
+              <p className="text-sm font-semibold">1 * LKR 20,000</p>
             </div>
-            <div className="flex justify-between mb-4">
-              <span className="font-semibold">Sales Discount:</span>
-              <span>LKR {totalPrice.toLocaleString()}</span>
-            </div>
-            <div className="flex justify-between mb-4">
-              <span className="font-semibold">Total:</span>
-              <span>LKR {totalPrice.toLocaleString()}</span>
-            </div>
-            <button className="w-full bg-black text-white py-2 rounded">Checkout</button>
+            <Trash2 className="cursor-pointer" />
           </div>
+        ))}
+      </div>
+      <div className="p-4 space-y-2">
+        <div className="flex justify-between text-lg font-semibold">
+          <span>Sub Total:</span>
+          <span>LKR 23,000</span>
         </div>
+        <div className="flex justify-between text-lg font-semibold">
+          <span>Sales Discount:</span>
+          <span>LKR 23,000</span>
+        </div>
+        <div className="flex justify-between text-lg font-semibold">
+          <span>Total:</span>
+          <span>LKR 23,000</span>
+        </div>
+        <button className="w-full py-2 mt-4 bg-green-500 text-white rounded-lg">
+          Checkout
+        </button>
       </div>
     </div>
-  )
-}
+  );
+};

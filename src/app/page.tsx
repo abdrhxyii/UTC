@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
 import Navbar from "./Components/Navbar";
+import { useRouter } from "next/navigation";
+
 
 export default function Home() {
+
+  const route = useRouter()
   const watches = Array(18).fill({
     name: "Royal Oak Mini-Frosted Gold Quartz",
     price: "LRK 23,000",
@@ -11,6 +15,10 @@ export default function Home() {
 
   const advertisemne = {
     image: "/advertisement.jpg"
+  }
+
+  const handleProductRouting = () => {
+    route.push('Product/212')
   }
 
   return (
@@ -28,7 +36,7 @@ export default function Home() {
       <div className="mx-auto px-4 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {watches.map((watch, index) => ( 
-            <div key={index} className="bg-white p-2 rounded-lg">
+            <div key={index} className="bg-white p-2 rounded-lg" onClick={handleProductRouting}>
               <Image
                 src={watch.image}
                 alt={watch.name}

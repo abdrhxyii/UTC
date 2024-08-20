@@ -14,6 +14,11 @@ const images = [
 
 export default function Product() {
   const [mainImage, setMainImage] = useState(images[0]);
+  const watches = Array(6).fill({
+    name: "Royal Oak Mini-Frosted Gold Quartz",
+    price: "LRK 23,000",
+    image: "/product.png" 
+  });
 
   return (
     <div>
@@ -44,6 +49,26 @@ export default function Product() {
         </div>
       </div>
     </div>
+
+    <p className='px-4 font-semibold'>You may also Like</p>
+    <div className="mx-auto px-4 mt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          {watches.map((watch, index) => ( 
+            <div key={index} className="bg-white p-2 rounded-lg">
+              <Image
+                src={watch.image}
+                alt={watch.name}
+                width={200}
+                height={200}
+                className="w-full h-auto rounded-xl"
+              />
+              <h3 className="text-sm font-semibold mt-2">{watch.name}</h3>
+              <p className="text-sm text-gray-600 mt-3">{watch.price}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
     </div>
   );
 }
