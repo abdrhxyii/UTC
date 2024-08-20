@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Navbar from "./Components/Navbar";
 import { useRouter } from "next/navigation";
-
+import Link from "next/link";
 
 export default function Home() {
 
@@ -36,7 +36,8 @@ export default function Home() {
       <div className="mx-auto px-4 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {watches.map((watch, index) => ( 
-            <div key={index} className="bg-white p-2 rounded-lg" onClick={handleProductRouting}>
+            <Link  key={index} href="/Product/212">
+            <div className="bg-white p-2 rounded-lg" onClick={handleProductRouting}>
               <Image
                 src={watch.image}
                 alt={watch.name}
@@ -47,6 +48,7 @@ export default function Home() {
               <h3 className="text-sm font-semibold mt-2">{watch.name}</h3>
               <p className="text-sm text-gray-600 mt-3">{watch.price}</p>
             </div>
+            </Link>
           ))}
         </div>
       </div>
