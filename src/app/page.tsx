@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div>
       <Navbar/>
-      <div className="mx-auto px-4 mt-3">
+      <div className="mx-auto px-7 mt-3">
         <Image
         src={advertisemne.image}
         alt=""
@@ -33,7 +33,7 @@ export default function Home() {
         height={600}
         />
       </div>
-      <div className="mx-auto px-4 mt-4">
+      <div className="mx-auto px-6 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {watches.map((watch, index) => ( 
             <Link  key={index} href="/Product/212">
