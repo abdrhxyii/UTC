@@ -16,7 +16,7 @@ export default function Navbar() {
   // }
 
   return (
-    <nav className="bg-black text-white px-10 py-4 m:px-10 m:py-4">
+    <nav className="bg-black text-white px-4 md:px-10 lg:px-10 py-4 m:px-10 m:py-4">
       <div className="flex items-center justify-between">
         {/* Left side - Title */}
         <div className="text-lg font-bold">MyBrand</div>
