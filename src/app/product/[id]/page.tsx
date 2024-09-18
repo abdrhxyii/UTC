@@ -25,7 +25,7 @@ export default function Product() {
     <Navbar/>
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 lg:w-[40%]">
           <div className="mb-4">
             <Image src={mainImage} alt="Watch" width={500} height={500} className="h-auto w-full rounded-lg" />
           </div>
@@ -50,8 +50,8 @@ export default function Product() {
       </div>
     </div>
 
-    <p className='px-4 font-semibold'>You may also Like</p>
-    <div className="mx-auto px-4 mt-4">
+    <p className='px-4 md:px-8 lg:px-12 font-semibold'>You may also Like</p>
+    <div className="mx-auto px-4 md:px-8 lg:px-10 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {watches.map((watch, index) => ( 
             <div key={index} className="bg-white p-2 rounded-lg">
