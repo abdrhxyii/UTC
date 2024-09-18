@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Footer from "./Components/Footer";
-import Testimonial from "./Components/Testimonial";
+// import Testimonial from "./Components/Testimonial";
 
 export default function Home() {
 
@@ -39,7 +39,7 @@ export default function Home() {
       <div className="mx-auto px-2 md:px-6 lg:px-6 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {watches.map((watch, index) => ( 
-            <Link href="/product/sjkjakajshuoquobakbdyev">
+            <Link  key={index} href="/product/sjkjakajshuoquobakbdyev">
             <div className="bg-white p-2 rounded-lg cursor-pointer">
               <Image
                 src={watch.image}
