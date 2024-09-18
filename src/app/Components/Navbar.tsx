@@ -112,16 +112,16 @@ export default function Navbar() {
 
             {/* Show the list only if the "Watch Brands" is clicked */}
             {isWatchBrandsOpen && (
-              <div className="pl-4">
-                <a href="#" className="block py-1 hover:text-gray-400">Rolex</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Omega</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Patek Philippe</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Apple Watch</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Samsung Galaxy Watch</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Fitbit</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Fossil</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Michael Kors</a>
-                <a href="#" className="block py-1 hover:text-gray-400">Guess</a>
+              <div className="pl-4 text-sm">
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Rolex</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Omega</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Patek Philippe</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Apple Watch</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Samsung Galaxy Watch</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Fitbit</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Fossil</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Michael Kors</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Guess</Link>
               </div>
             )}
           </div>
