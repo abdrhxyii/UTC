@@ -67,7 +67,7 @@ export default function Navbar() {
           {/* Mega Menu Dropdown for desktop */}
           <Dropdown overlay={menu} trigger={['click']} className="hover:text-gray-400">
             <a className="text-sm font-semibold" onClick={e => e.preventDefault()}>
-              Watch Brands <DownOutlined />
+              Watch Brands <DownOutlined size={20} />
             </a>
           </Dropdown>
 
