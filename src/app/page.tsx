@@ -6,6 +6,11 @@ import Link from "next/link";
 import Footer from "./Components/Footer";
 import TestimonialBody from "./Components/Testimonial/TestimonialBody";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/navigation";
+
 export default function Home() {
   const route = useRouter();
   const watches = Array(18).fill({
@@ -25,16 +30,57 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="mx-auto px-4 md:px-7 lg:px-7 mt-3">
-        <Image
-          src={advertisemne.image}
-          alt=""
-          layout="responsive"
-          width={1000}
-          height={600}
-          style={{ borderRadius: 10 }}
-        />
+      <div className="mx-auto px-4 md:px-7 lg:px-7 mt-3 min-h-40">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          navigation={false}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          className="w-full h-full"
+        >
+          <SwiperSlide>
+            <div className="relative h-[170px] md:h-[440px]">
+              <Image
+                src={'/vercel.svg'}
+                alt="Vercel"
+                layout="fill"
+                objectFit="cover"
+                sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw"
+                priority
+                style={{ borderRadius: 10 }}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-[170px] md:h-[440px]">
+              <Image
+                src={advertisemne.image}
+                alt="Advertisement"
+                layout="fill"
+                objectFit="cover"
+                sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw"
+                priority
+                style={{ borderRadius: 10 }}
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative h-[170px] md:h-[440px]">
+              <Image
+                src={'/vercel.svg'}
+                alt="Vercel"
+                layout="fill"
+                objectFit="cover"
+                sizes="(max-width: 768px) 100vw, (min-width: 768px) 50vw"
+                priority
+                style={{ borderRadius: 10 }}
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
+
+
+
       <div className="mx-auto px-2 md:px-6 lg:px-6 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {watches.map((watch, index) => (
