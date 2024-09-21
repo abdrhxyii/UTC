@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/navigation";
+import Head from "next/head";
 
 export default function Home() {
   const route = useRouter();
@@ -79,7 +80,13 @@ export default function Home() {
         </Swiper>
       </div>
 
-
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9274243186707236"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
 
       <div className="mx-auto px-2 md:px-6 lg:px-6 mt-4">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
