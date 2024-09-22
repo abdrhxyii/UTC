@@ -40,7 +40,7 @@ export default function Cart({ onClose }: any) {
           <span className="text-black">Total:</span>
           <span className="text-black">LKR 23,000</span>
         </div>
-        <button className="w-full py-2 mt-4 bg-green-500 text-white rounded-lg">
+        <button className="w-full py-4 mt-4 bg-green-500 text-white rounded-lg">
           Checkout
         </button>
       </div>

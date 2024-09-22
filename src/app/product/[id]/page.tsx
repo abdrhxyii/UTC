@@ -86,8 +86,8 @@ export default function Product() {
             <p className="text-2xl font-bold mb-4">LKR 23,000</p>
 
             <Quantity/>
-            <button className="bg-black text-white py-3 px-4 w-full mb-2 rounded-lg">Add to cart (0)</button>
-            <button className="bg-gray-200 text-black py-3 px-4 w-full rounded-lg">Buy now</button>
+            <button className="bg-black text-white py-4 px-4 w-full mb-2 rounded-lg">Add to cart (0)</button>
+            <button className="bg-gray-200 text-black py-4 px-4 w-full rounded-lg">Buy now</button>
             <CollapseSection/>
           </div>
         </div>
