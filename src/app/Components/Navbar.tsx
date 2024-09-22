@@ -9,10 +9,11 @@ import 'antd/dist/reset.css';  // Import Ant Design styles
 export default function Navbar() {
   const [isCartOpen, setCartOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isWatchBrandsOpen, setWatchBrandsOpen] = useState(false); // New state for watch brands list
+  const [isMenOpen, setMenOpen] = useState(false);
+  const [isWomenOpen, setWomenOpen] = useState(false);
 
-  // Menu for the mega dropdown (desktop only)
-  const menu = (
+  // Men submenu for desktop
+  const menMenu = (
     <Menu>
       <Menu.ItemGroup title="Luxury Watches">
         <Menu.Item key="1">
@@ -37,7 +38,12 @@ export default function Navbar() {
           <a href="#">Fitbit</a>
         </Menu.Item>
       </Menu.ItemGroup>
-      <Menu.Divider />
+    </Menu>
+  );
+
+  // Women submenu for desktop
+  const womenMenu = (
+    <Menu>
       <Menu.ItemGroup title="Fashion Watches">
         <Menu.Item key="7">
           <a href="#">Fossil</a>
@@ -64,10 +70,17 @@ export default function Navbar() {
             Home
           </Link>
 
-          {/* Mega Menu Dropdown for desktop */}
-          <Dropdown overlay={menu} trigger={['click']} className="hover:text-gray-400">
+          {/* Men Dropdown for desktop */}
+          <Dropdown overlay={menMenu} trigger={['click']} className="hover:text-gray-400">
             <a className="text-sm font-semibold" onClick={e => e.preventDefault()}>
-              Watch Brands <DownOutlined size={20} />
+              Men <DownOutlined size={20} />
+            </a>
+          </Dropdown>
+
+          {/* Women Dropdown for desktop */}
+          <Dropdown overlay={womenMenu} trigger={['click']} className="hover:text-gray-400">
+            <a className="text-sm font-semibold" onClick={e => e.preventDefault()}>
+              Women <DownOutlined size={20} />
             </a>
           </Dropdown>
 
@@ -77,13 +90,13 @@ export default function Navbar() {
         </div>
 
         <div className="flex space-x-4 items-center">
-          <Search size={19} />
-          <ShoppingCart onClick={() => setCartOpen(true)} size={19} />
-          <User size={19} />
+          <Search size={25} />
+          <ShoppingCart onClick={() => setCartOpen(true)} size={25} />
+          <User size={25} />
 
           {/* Hamburger Menu for Mobile */}
           <div className="md:hidden">
-            <LucideMenu onClick={() => setIsOpen(!isOpen)} />
+            <LucideMenu size={25} onClick={() => setIsOpen(!isOpen)} />
           </div>
         </div>
       </div>
@@ -100,18 +113,18 @@ export default function Navbar() {
             Home
           </Link>
 
-          {/* Watch Brands List for Mobile */}
+          {/* Men List for Mobile */}
           <div className="block py-2">
             <div
               className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer"
-              onClick={() => setWatchBrandsOpen(!isWatchBrandsOpen)}
+              onClick={() => setMenOpen(!isMenOpen)}
             >
-              <span>Watch Brands</span>
-              {isWatchBrandsOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+              <span>Men</span>
+              {isMenOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
             </div>
 
-            {/* Show the list only if the "Watch Brands" is clicked */}
-            {isWatchBrandsOpen && (
+            {/* Show the list only if "Men" is clicked */}
+            {isMenOpen && (
               <div className="pl-4 text-sm">
                 <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Rolex</Link>
                 <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Omega</Link>
@@ -119,9 +132,26 @@ export default function Navbar() {
                 <Link href="#" className="block py-1 hover:text-gray-400">Apple Watch</Link>
                 <Link href="#" className="block py-1 hover:text-gray-400">Samsung Galaxy Watch</Link>
                 <Link href="#" className="block py-1 hover:text-gray-400">Fitbit</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400">Fossil</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400">Michael Kors</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400">Guess</Link>
+              </div>
+            )}
+          </div>
+
+          {/* Women List for Mobile */}
+          <div className="block py-2">
+            <div
+              className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer"
+              onClick={() => setWomenOpen(!isWomenOpen)}
+            >
+              <span>Women</span>
+              {isWomenOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+            </div>
+
+            {/* Show the list only if "Women" is clicked */}
+            {isWomenOpen && (
+              <div className="pl-4 text-sm">
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Fossil</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Michael Kors</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Guess</Link>
               </div>
             )}
           </div>
