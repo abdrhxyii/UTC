@@ -22,8 +22,8 @@ export default function ProductCard() {
       </div>
       <div className="p-4">
         {/* Product details */}
-        <h2 className="text-lg font-semibold text-gray-900">iPhone 16 Pro Max</h2>
-        <p className="text-sm text-gray-500">Apple, iPhone</p>
+        <h2 className="text-sm font-semibold text-primary-black">iPhone 16 Pro Max</h2>
+        <p className="text-xs text-gray-500">Apple, iPhone</p>
         {/* Color options */}
         <div className="flex space-x-2 my-2">
           <span className="w-4 h-4 rounded-full bg-[#d9c1a1] border border-gray-300"></span>
@@ -32,7 +32,7 @@ export default function ProductCard() {
           <span className="w-4 h-4 rounded-full bg-white border border-gray-300"></span>
         </div>
         {/* Price */}
-        <p className="text-lg font-bold text-blue-600">Rs. 514,900.00</p>
+        <p className="text-base font-bold text-blue-600">Rs. 514,900.00</p>
       </div>
     </div>
   );
