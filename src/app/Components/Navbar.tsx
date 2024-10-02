@@ -62,7 +62,7 @@ export default function Navbar() {
     <nav className="bg-black text-white px-4 md:px-10 lg:px-10 py-4">
       <div className="flex items-center justify-between">
         {/* Left side - Title */}
-        <div className="text-lg font-bold">MyBrand</div>
+        <div className="text-lg font-bold">GulfMobile</div>
 
         {/* Right side - Icons and Menu */}
         <div className="hidden md:flex space-x-10 items-center">
