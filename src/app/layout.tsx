@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto  } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Customize the font if needed
+// const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Customize the font if needed
 
 export const metadata: Metadata = {
   title: "UTC",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
