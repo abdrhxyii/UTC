@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors: {
         "border-grey": "#ddd",
-        "gray-custom": "#777777"
+        "gray-custom": "#777777",
+        "primary-black": "#242424"
       }
     },
   },
