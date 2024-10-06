@@ -1,8 +1,11 @@
 // components/ProductCard.jsx
 import { ShoppingCart, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ProductCard() {
   return (
+    <>
+    <Link href={'/product/iphone'}>
     <div className="max-w-xs rounded-lg border border-gray-200 overflow-hidden transition-shadow duration-300 ease-in-out">
       <div className="relative">
         <img 
@@ -35,5 +38,7 @@ export default function ProductCard() {
         <p className="text-base font-bold text-blue-600">Rs. 514,900.00</p>
       </div>
     </div>
+    </Link>
+    </>
   );
 }

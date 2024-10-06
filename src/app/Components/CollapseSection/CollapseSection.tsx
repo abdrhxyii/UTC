@@ -14,7 +14,7 @@ const CollapseSection = () => {
       };
   return (
 
-    <div className="bg-gray-100 p-4 mt-3 mb-4">
+    <div className=" p-4 mt-3 mb-4">
         <Collapse
         ghost
         expandIconPosition="end"
@@ -29,7 +29,7 @@ const CollapseSection = () => {
         >
         {/* Product Details */}
         <Panel
-            header="Product Details"
+            header="Additional Information"
             key="1"
             className="text-lg font-semibold text-black"
             style={{ borderBottom: '1px solid #ddd' }} // Ensuring custom border color

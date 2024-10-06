@@ -1,36 +1,38 @@
-import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
-import React, {useState} from 'react'
+// components/Quantity.js
+"use client";
+import { useState } from "react";
+import { Plus, Minus } from "lucide-react"; // Import icons from lucide-react
 
-const Quantity = () => {
-    const [quantity, setQuantity] = useState(1);
+export default function Quantity({ initialQuantity = 1, maxQuantity = 10 }) {
+  const [quantity, setQuantity] = useState(initialQuantity);
+
+  const handleIncrement = () => {
+    if (quantity < maxQuantity) {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   return (
-    <div className="mb-4">
-    <label htmlFor="quantity" className="font-semibold">Quantity:</label>
-    <div className="flex flex-row items-center mt-2">
+    <div className="flex items-center space-x-4 mb-5">
       <button
-        className="border border-gray-300 rounded-lg p-1"
-        aria-label="Decrease Quantity"
+        onClick={handleDecrement}
+        className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
       >
-        <MinusOutlined />
+        <Minus size={16} />
       </button>
-      <input
-        type="number"
-        id="quantity"
-        value={quantity}
-        onChange={(e: any) => setQuantity(Math.max(1, parseInt(e.target.value)))}
-        min={1}
-        className="mx-2 w-16 text-center border border-gray-300 rounded-lg p-1"
-      />
+      <span className="text-xl font-semibold">{quantity}</span>
       <button
-        className="border border-gray-300 rounded-lg p-1"
-        aria-label="Increase Quantity"
+        onClick={handleIncrement}
+        className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 transition"
       >
-        <PlusOutlined />
+        <Plus size={16} />
       </button>
     </div>
-  </div>
-  )
+  );
 }
-
-export default Quantity

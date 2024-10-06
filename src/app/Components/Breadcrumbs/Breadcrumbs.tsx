@@ -4,7 +4,7 @@ import { Breadcrumb } from 'antd';
 const Breadcrumbs = () => {
   return (
     <Breadcrumb
-    separator=">"
+    separator="/"
     items={[
       {
         title: 'Home',
