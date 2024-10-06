@@ -27,8 +27,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-    <Navbar/>
-    <AdminLayout selectedMenuItem={selectedMenuItem} onSelectMenuItem={setSelectedMenuItem}>
+    <AdminLayout>
       <h2 className="text-2xl font-bold mb-4">
         {selectedMenuItem.charAt(0).toUpperCase() + selectedMenuItem.slice(1)}
       </h2>

@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isMenOpen, setMenOpen] = useState(false);
   const [isWomenOpen, setWomenOpen] = useState(false);
 
-  // Men submenu for desktop
+  // Smart Phone submenu for desktop
   const menMenu = (
     <Menu>
       <Menu.ItemGroup title="Luxury Watches">
@@ -70,10 +70,10 @@ export default function Navbar() {
             Home
           </Link>
 
-          {/* Men Dropdown for desktop */}
+          {/* Smart Phone Dropdown for desktop */}
           <Dropdown overlay={menMenu} trigger={['click']} className="hover:text-gray-400">
             <a className="text-sm font-semibold" onClick={e => e.preventDefault()}>
-              Men <DownOutlined size={20} />
+              Smart Phone <DownOutlined size={20} />
             </a>
           </Dropdown>
 
@@ -113,17 +113,17 @@ export default function Navbar() {
             Home
           </Link>
 
-          {/* Men List for Mobile */}
+          {/* Smart Phone List for Mobile */}
           <div className="block py-2">
             <div
               className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer"
               onClick={() => setMenOpen(!isMenOpen)}
             >
-              <span>Men</span>
+              <span>Smart Phone</span>
               {isMenOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
             </div>
 
-            {/* Show the list only if "Men" is clicked */}
+            {/* Show the list only if "Smart Phone" is clicked */}
             {isMenOpen && (
               <div className="pl-4 text-sm">
                 <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Rolex</Link>

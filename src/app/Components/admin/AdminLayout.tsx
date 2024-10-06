@@ -2,12 +2,12 @@
 import React from 'react';
 import AdminSidebar from './AdminSidebar';
 
-const AdminLayout = ({ selectedMenuItem, onSelectMenuItem, children }: any) => (
+const AdminLayout = ({ children }: any) => (
   <div className="flex">
     <div className="hidden md:block">
-      <AdminSidebar selectedMenuItem={selectedMenuItem} onSelectMenuItem={onSelectMenuItem} />
+      <AdminSidebar/>
     </div>
-    <div className="md:ml-64 p-4 w-full">{children}</div>
+    <div className="p-4 w-full">{children}</div>
   </div>
 );
 
