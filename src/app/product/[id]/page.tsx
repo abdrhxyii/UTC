@@ -183,7 +183,7 @@ export default function Product() {
             navigation={false}
             autoplay={{ delay: 3000 }}
             breakpoints={{
-              640: { slidesPerView: 2 }, 
+              640: { slidesPerView: 3 }, 
               768: { slidesPerView: 3 },
               1024: { slidesPerView: 4 }, 
               1280: { slidesPerView: 5 }, 
