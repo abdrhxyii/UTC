@@ -10,7 +10,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import "swiper/css";
 import "swiper/css/navigation";
 import ProductCard from "./Components/ProductCard";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -31,6 +31,12 @@ export default function Home() {
   ];
 
   const [activeTab, setActiveTab] = useState("samsung");
+
+  const products = [
+    { title: 'Macbook', imageSrc: '/mb-removebg-preview.png' },
+    { title: 'iPad', imageSrc: '/Apple-Ipad-Air-2020-Sky-Blue-removebg-preview.png' },
+    { title: 'Apple Watch', imageSrc: '/watche.png' },
+  ];
 
   return (
     <>
@@ -94,7 +100,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto px-2 md:px-6 lg:px-24 mt-8">
+        <div className="mx-auto px-2 md:px-6 lg:px-24 mt-8 mb-40">
         <div className="w-full flex flex-col justify-center items-center mb-6">
           <h4 className="text-3xl font-bold">Apple iPhone</h4>
           <p className="text-sm text-gray-custom font-normal">Which iPhone is right for you?</p>
@@ -113,6 +119,27 @@ export default function Home() {
             <ProductCard />
             <ProductCard />
           </div>
+          </div>
+
+          {/* category section */}
+          <div className="mx-auto px-2 md:px-6 lg:px-24 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {products.map((product) => (
+                <div key={product.title} className="bg-gray-50 rounded-md p-5 w-full h-[400px]">
+                  <h2 className="text-xl font-bold ">{product.title}</h2>
+                  <Link href="#" className="text-black hover:underline text-xs flex flex-row items-center">View All <ChevronRight size={15}/></Link>
+                  <div className="mb-4 flex justify-center items-center">
+                    <Image
+                      src={product.imageSrc}
+                      alt={product.title}
+                      width={500}
+                      height={500}
+                      className="rounded-lg object-contain w-full h-[300px]" 
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mx-auto px-2 md:px-6 lg:px-24 mt-8">

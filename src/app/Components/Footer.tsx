@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Section */}
         <div>
-          <h3 className="text-lg font-bold">MyBrand</h3>
+          <h3 className="text-lg font-bold">Gulf Mobile</h3>
           <p className="text-gray-400 mt-2 text-sm">
             We offer the finest collection of luxury, smart, and fashion watches for every style and occasion.
           </p>
@@ -37,14 +37,15 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold">Brands</h3>
           <ul className="mt-2 space-y-1 text-sm">
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Rolex</Link></li>
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Omega</Link></li>
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Patek Philippe</Link></li>
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Apple Watch</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Samsung</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Apple</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Redmi</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Huawei</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Oppo</Link></li>
             <li><Link href="#" className="hover:text-gray-400 hover:underline">Samsung Galaxy Watch</Link></li>
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Fossil</Link></li>
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Michael Kors</Link></li>
-            <li><Link href="#" className="hover:text-gray-400 hover:underline">Guess</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Vivo</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">JBL</Link></li>
+            <li><Link href="#" className="hover:text-gray-400 hover:underline">Nokia</Link></li>
           </ul>
         </div>
 
@@ -64,7 +65,7 @@ export default function Footer() {
 
       {/* Bottom copyright section */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
-        <p>&copy; {new Date().getFullYear()} MyBrand. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Gulf Mobile. All rights reserved.</p>
       </div>
     </footer>
   );
