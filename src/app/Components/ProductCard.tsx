@@ -1,5 +1,6 @@
 import { ShoppingCart, Heart } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image'; // Import Next.js Image component
 
 export default function ProductCard() {
   return (
@@ -7,10 +8,13 @@ export default function ProductCard() {
       <Link href={'/product/iphone'}>
         <div className="max-w-xs rounded-lg border border-gray-200 overflow-hidden transition-shadow duration-300 ease-in-out relative group">
           <div className="relative">
-            <img 
+            {/* Replace img with Next.js Image */}
+            <Image
               src="/iphon.webp" 
               alt="iPhone 16 Pro Max" 
-              className="w-full object-center"
+              width={400} // Provide width
+              height={400} // Provide height
+              className="w-full object-center" 
             />
             {/* Icons */}
             <div className="absolute top-2 right-2 space-y-2 transition-all duration-300 transform translate-x-0 md:translate-x-8 md:group-hover:translate-x-0 opacity-100 md:opacity-0 md:group-hover:opacity-100">
