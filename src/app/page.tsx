@@ -124,8 +124,8 @@ export default function Home() {
           <div className="mx-auto px-2 md:px-6 lg:px-24 mt-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {products.map((product) => (
-                <Link href={'/category'}>
-                <div key={product.title} className="bg-gray-50 rounded-md p-5 w-full h-[400px]">
+                <Link href={'/category'} key={product.title}>
+                <div className="bg-gray-50 rounded-md p-5 w-full h-[400px]">
                   <h2 className="text-xl font-bold ">{product.title}</h2>
                   <Link href="/category" className="text-black hover:underline text-xs flex flex-row items-center">View All <ChevronRight size={15}/></Link>
                   <div className="mb-4 flex justify-center items-center">
