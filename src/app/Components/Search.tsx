@@ -1,3 +1,4 @@
+"use client";
 import { useState } from 'react';
 import { X } from 'lucide-react'; 
 import ProductCard from './ProductCard';
@@ -19,13 +20,13 @@ export default function SearchModal() {
         </div>
         <hr className="my-4 border-gray-300" />
       </div>
-      <div className="flex-grow overflow-y-auto w-full max-h-[75vh]"> {/* Use max height to limit the height */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 p-2"> {/* Adjusted column numbers and added padding */}
+      {/* <div className="flex-grow overflow-y-auto w-full max-h-[75vh]"> 
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 p-2">
           {[...Array(12)].map((_, index) => (
             <ProductCard key={index} />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

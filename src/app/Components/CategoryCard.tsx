@@ -1,4 +1,6 @@
+"use client";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CategoryCard = ({ title, imageUrl }: any) => {
   return (
@@ -7,9 +9,9 @@ const CategoryCard = ({ title, imageUrl }: any) => {
         <Image src={imageUrl} alt={title} width={200} height={150} objectFit="contain" />
       </div>
       <h2 className="text-2xl font-semibold mt-4">{title}</h2>
-      <a href="#" className="text-blue-500 hover:underline mt-2 inline-block">
-        VIEW ALL &rarr;
-      </a>
+      <Link href="/" className="text-blue-500 hover:underline mt-2 inline-block">
+        VIEW ALL
+      </Link>
     </div>
   );
 };

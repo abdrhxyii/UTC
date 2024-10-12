@@ -14,7 +14,6 @@ import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
-  const route = useRouter();
   const watches = Array(18).fill({
     name: "",
     price: "",
@@ -127,7 +126,7 @@ export default function Home() {
                 <Link href={'/category'} key={product.title}>
                 <div className="bg-gray-50 rounded-md p-5 w-full h-[400px]">
                   <h2 className="text-xl font-bold ">{product.title}</h2>
-                  <Link href="/category" className="text-black hover:underline text-xs flex flex-row items-center">View All <ChevronRight size={15}/></Link>
+                  <div className="text-black hover:underline text-xs flex flex-row items-center">View All <ChevronRight size={15}/></div>
                   <div className="mb-4 flex justify-center items-center">
                     <Image
                       src={product.imageSrc}
