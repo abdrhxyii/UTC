@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { Collapse } from 'antd';
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";

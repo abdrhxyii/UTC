@@ -37,7 +37,7 @@ const AdminSidebar = () => {
     >
       <nav className="flex-1 overflow-y-auto px-2 space-y-2">
         <ul className="py-4">
-          {menuItems.map((item, index) => {
+          {/* {menuItems.map((item, index) => {
             const Icon = item.icon;
             return (
               <li
@@ -55,7 +55,7 @@ const AdminSidebar = () => {
                 </a>
               </li>
             );
-          })}
+          })} */}
         </ul>
       </nav>
     </div>

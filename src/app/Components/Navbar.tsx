@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Menu, Dropdown } from 'antd';
 import { ShoppingCart, User, Search, Menu as LucideMenu, ChevronDown, ChevronUp, X } from 'lucide-react';
@@ -18,25 +19,25 @@ export default function Navbar() {
     <Menu>
       <Menu.ItemGroup title="Luxury Watches">
         <Menu.Item key="1">
-          <a href="#">Rolex</a>
+          <Link href="/">Rolex</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <a href="#">Omega</a>
+          <Link href="#">Omega</Link>
         </Menu.Item>
         <Menu.Item key="3">
-          <a href="#">Patek Philippe</a>
+          <Link href="#">Patek Philippe</Link>
         </Menu.Item>
       </Menu.ItemGroup>
       <Menu.Divider />
       <Menu.ItemGroup title="Smart Watches">
         <Menu.Item key="4">
-          <a href="#">Apple Watch</a>
+          <Link href="#">Apple Watch</Link>
         </Menu.Item>
         <Menu.Item key="5">
-          <a href="#">Samsung Galaxy Watch</a>
+          <Link href="#">Samsung Galaxy Watch</Link>
         </Menu.Item>
         <Menu.Item key="6">
-          <a href="#">Fitbit</a>
+          <Link href="#">Fitbit</Link>
         </Menu.Item>
       </Menu.ItemGroup>
     </Menu>
@@ -47,13 +48,13 @@ export default function Navbar() {
     <Menu>
       <Menu.ItemGroup title="Fashion Watches">
         <Menu.Item key="7">
-          <a href="#">Fossil</a>
+          <Link href="#">Fossil</Link>
         </Menu.Item>
         <Menu.Item key="8">
-          <a href="#">Michael Kors</a>
+          <Link href="#">Michael Kors</Link>
         </Menu.Item>
         <Menu.Item key="9">
-          <a href="#">Guess</a>
+          <Link href="#">Guess</Link>
         </Menu.Item>
       </Menu.ItemGroup>
     </Menu>
@@ -68,14 +69,14 @@ export default function Navbar() {
             Home
           </Link>
           <Dropdown overlay={menMenu} trigger={['click']} className="hover:text-gray-400">
-            <a className="text-sm font-semibold" onClick={e => e.preventDefault()}>
+            <span className="text-sm font-semibold" onClick={e => e.preventDefault()}>
               Smart Phone <DownOutlined size={20} />
-            </a>
+            </span>
           </Dropdown>
           <Dropdown overlay={womenMenu} trigger={['click']} className="hover:text-gray-400">
-            <a className="text-sm font-semibold" onClick={e => e.preventDefault()}>
+            <span className="text-sm font-semibold" onClick={e => e.preventDefault()}>
               Women <DownOutlined size={20} />
-            </a>
+            </span>
           </Dropdown>
 
           <Link href="/about" className="hover:text-gray-400 text-sm font-semibold">
