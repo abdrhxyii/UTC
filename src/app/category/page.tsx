@@ -38,7 +38,7 @@ const MacProducts = () => {
                         <select
                             value={selectedSort}
                             onChange={handleChange}
-                            className="text-sm border-b-gray-50 rounded p-2 "
+                            className="text-sm bg-white rounded p-2 "
                         >
                             <option value="" disabled className="text-xs">
                                 Default sorting
