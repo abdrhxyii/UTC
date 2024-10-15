@@ -11,16 +11,16 @@ export default function Cart({ onClose }: any) {
       </div>
       
       <div className="p-4 space-y-4 overflow-y-auto flex-1" style={{ maxHeight: 'calc(100% - 220px)' }}>
-        {Array.from({ length: 15 }).map((_, idx) => (
+        {Array.from({ length: 2 }).map((_, idx) => (
           <div
             key={idx}
             className="flex items-center p-2 rounded-lg border border-border-grey"
           >
-            <Image src="/product.png" alt="Product Image" width={70} height={80} className="rounded-lg" />
+            <Image src="/iPhone.png" alt="Product Image" width={70} height={80} className="rounded-lg" />
             <div className="ml-4 flex-1">
-              <h3 className="font-semibold text-black">Royal Oak Mini Frosted Gold Quartz</h3>
-              <p className="text-sm text-gray-500">Audemars Piguet</p>
-              <p className="text-sm font-semibold text-black">1 * LKR 20,000</p>
+              <h3 className="font-semibold text-black">Samsung Galaxy S22 Ultra</h3>
+              <p className="text-sm text-gray-500">Samsung</p>
+              <p className="text-sm font-semibold text-black">1 * LKR 200,000</p>
             </div>
             <Trash2 className="cursor-pointer text-black" />
           </div>
@@ -30,15 +30,15 @@ export default function Cart({ onClose }: any) {
       <div className="p-4 space-y-2 border-t fixed bottom-0 w-full sm:w-[400px] bg-white">
         <div className="flex justify-between text-lg font-semibold">
           <span className="text-black">Sub Total:</span>
-          <span className="text-black">LKR 23,000</span>
+          <span className="text-black">LKR 200,000</span>
         </div>
         <div className="flex justify-between text-lg font-semibold">
           <span className="text-black">Sales Discount:</span>
-          <span className="text-black">LKR 23,000</span>
+          <span className="text-black">LKR 20,000</span>
         </div>
         <div className="flex justify-between text-lg font-semibold">
           <span className="text-black">Total:</span>
-          <span className="text-black">LKR 23,000</span>
+          <span className="text-black">LKR 180,000</span>
         </div>
         <button className="w-full py-4 mt-4 bg-green-500 text-white rounded-lg">
           Checkout

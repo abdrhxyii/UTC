@@ -12,49 +12,48 @@ export default function Navbar() {
   const [isCartOpen, setCartOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isMenOpen, setMenOpen] = useState(false);
-  const [isWomenOpen, setWomenOpen] = useState(false);
+  const [isSectionOpen, setSectionOpen] = useState(false);
   const [isSearchOpen, setSearchOpen] = useState(false);
 
   const menMenu = (
     <Menu>
-      <Menu.ItemGroup title="Luxury Watches">
+      <Menu.ItemGroup title="Smartphones">
         <Menu.Item key="1">
-          <Link href="/">Rolex</Link>
+          <Link href="/">iPhone</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link href="#">Omega</Link>
+          <Link href="#">Samsung Galaxy</Link>
         </Menu.Item>
         <Menu.Item key="3">
-          <Link href="#">Patek Philippe</Link>
+          <Link href="#">Google Pixel</Link>
         </Menu.Item>
       </Menu.ItemGroup>
       <Menu.Divider />
-      <Menu.ItemGroup title="Smart Watches">
+      <Menu.ItemGroup title="Budget Phones">
         <Menu.Item key="4">
-          <Link href="#">Apple Watch</Link>
+          <Link href="#">Xiaomi</Link>
         </Menu.Item>
         <Menu.Item key="5">
-          <Link href="#">Samsung Galaxy Watch</Link>
+          <Link href="#">OnePlus</Link>
         </Menu.Item>
         <Menu.Item key="6">
-          <Link href="#">Fitbit</Link>
+          <Link href="#">Motorola</Link>
         </Menu.Item>
       </Menu.ItemGroup>
     </Menu>
   );
 
-  // Women submenu for desktop
-  const womenMenu = (
+  const accessoriesMenu = (
     <Menu>
-      <Menu.ItemGroup title="Fashion Watches">
+      <Menu.ItemGroup title="Accessories">
         <Menu.Item key="7">
-          <Link href="#">Fossil</Link>
+          <Link href="#">Phone Cases</Link>
         </Menu.Item>
         <Menu.Item key="8">
-          <Link href="#">Michael Kors</Link>
+          <Link href="#">Chargers</Link>
         </Menu.Item>
         <Menu.Item key="9">
-          <Link href="#">Guess</Link>
+          <Link href="#">Screen Protectors</Link>
         </Menu.Item>
       </Menu.ItemGroup>
     </Menu>
@@ -70,12 +69,12 @@ export default function Navbar() {
           </Link>
           <Dropdown overlay={menMenu} trigger={['click']} className="hover:text-gray-400">
             <span className="text-sm font-semibold" onClick={e => e.preventDefault()}>
-              Smart Phone <DownOutlined size={20} />
+              Smartphones <DownOutlined size={20} />
             </span>
           </Dropdown>
-          <Dropdown overlay={womenMenu} trigger={['click']} className="hover:text-gray-400">
+          <Dropdown overlay={accessoriesMenu} trigger={['click']} className="hover:text-gray-400">
             <span className="text-sm font-semibold" onClick={e => e.preventDefault()}>
-              Women <DownOutlined size={20} />
+              Accessories <DownOutlined size={20} />
             </span>
           </Dropdown>
 
@@ -99,52 +98,52 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="p-4">
+        <div className="p-2">
           <div className="text-lg font-bold mb-8">Gulf Mobile</div>
-          <Link href="/" className="block py-2 hover:text-gray-400">
+          <Link href="/" className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2">
             Home
           </Link>
 
           <div className="block py-2">
             <div
-              className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer"
+              className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2"
               onClick={() => setMenOpen(!isMenOpen)}
             >
-              <span>Smart Phone</span>
+              <span>Smartphones</span>
               {isMenOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
             </div>
 
             {isMenOpen && (
               <div className="pl-4 text-sm">
-                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Rolex</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Omega</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Patek Philippe</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400">Apple Watch</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400">Samsung Galaxy Watch</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400">Fitbit</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">iPhone</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Samsung Galaxy</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Google Pixel</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Xiaomi</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">OnePlus</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400">Motorola</Link>
               </div>
             )}
           </div>
 
           <div className="block py-2">
             <div
-              className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer"
-              onClick={() => setWomenOpen(!isWomenOpen)}
+              className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2"
+              onClick={() => setSectionOpen(!isSectionOpen)}
             >
-              <span>Women</span>
-              {isWomenOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+              <span>Accessories</span>
+              {isSectionOpen ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
             </div>
 
-            {isWomenOpen && (
+            {isSectionOpen && (
               <div className="pl-4 text-sm">
-                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Fossil</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Michael Kors</Link>
-                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Guess</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Phone Cases</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Chargers</Link>
+                <Link href="#" className="block py-1 hover:text-gray-400 hover:underline">Screen Protectors</Link>
               </div>
             )}
           </div>
 
-          <Link href="/about" className="block py-2 hover:text-gray-400">
+          <Link href="/about" className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2">
             About Us
           </Link>
         </div>
