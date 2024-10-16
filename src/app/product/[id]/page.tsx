@@ -39,14 +39,12 @@ export default function Product() {
       price: "LKR 23,000",
       image: "/iphon.webp",
     });
-    const description = `Brighten up your wardrobe with our Women's A-Line Yellow Dress. This vibrant and trendy dress features a stunning A-line silhouette that cinches at the waist and flows out gracefully, creating a chic and elegant look. The sunny yellow hue adds a pop of color, perfect for summer outings or any event. You can pair it with your favorite accessories to enhance the look further. Perfect for casual wear or dressing up for special occasions, this dress will make a bold fashion statement and make you feel comfortable all day long.`;
-
+    const description = `The iPhone 14 Pro Max features a stunning 6.7-inch Super Retina XDR display, powered by the A16 Bionic chip. With an advanced triple-camera system, it captures incredible photos in any lighting. Available in multiple storage options, this model is perfect for both professionals and casual users looking for top performance.`;
     const characterLimit = 150;
-
-    const categories = ["Luxury", "Women's Watches", "Gold"];
-    const tags = ["Quartz", "Frosted", "Royal Oak", "Stylish", "Elegant"];
-    const colors = ["Black", "White", "Blue", "Red"];
-    const storageOptions = ["64GB", "128GB", "256GB", "512GB"];
+    const categories = ["Smartphones", "Apple", "iPhone"];
+    const tags = ["iPhone 14 Pro Max", "A16 Bionic", "OLED Display", "5G", "Pro Camera"];
+    const colors = ["Black", "Silver", "Gold", "Deep Purple"];
+    const storageOptions = ["128GB", "256GB", "512GB", "1TB"];
 
   return (
     <div>
@@ -85,8 +83,8 @@ export default function Product() {
           </div>
 
           <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
-            <h1 className="text-3xl font-bold mb-2">Royal Oak Mini Frosted Gold Quartz</h1>
-            <p className="text-xl font-bold mb-2 text-blue-600">LKR 23,000</p>
+            <h1 className="text-3xl font-bold mb-2">iPhone 14 Pro Max</h1>
+            <p className="text-xl font-bold mb-2 text-blue-600">LKR 400,000</p>
 
             <p className="text-gray-600 mb-4 text-sm">
               {isExpanded
