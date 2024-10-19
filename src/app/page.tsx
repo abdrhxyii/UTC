@@ -11,9 +11,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import ProductCard from "./Components/ProductCard";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Banner from "./Components/Banner";
 
 export default function Home() {
+  const [imageSrc, setImageSrc] = useState("/heroweb.jpg");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setImageSrc("/heromobile.jpg"); 
+      } else {
+        setImageSrc("/heroweb.jpg"); 
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const watches = Array(18).fill({
     name: "",
     price: "",
@@ -41,9 +57,9 @@ export default function Home() {
     <>
       <div>
         <Navbar />
-        <div className="relative w-full h-[750px] md:h-[600px] lg:h-[700px]">
+        <div className="relative w-full h-[700px] md:h-[600px] lg:h-[600px]">
           <Image
-            src="/heroiphonesection.jpg"
+            src={imageSrc}
             alt="iphone"
             fill
             quality={100}

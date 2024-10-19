@@ -98,7 +98,7 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="p-2">
+        <div className="p-3">
           <div className="text-lg font-bold mb-8">Gulf Mobile</div>
           <Link href="/" className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2">
             Home
