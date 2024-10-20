@@ -100,7 +100,7 @@ export default function Navbar() {
       >
         <div className="p-3">
           <div className="text-lg font-bold mb-8">Gulf Mobile</div>
-          <Link href="/" className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2">
+          <Link href="/" className="font-semibold text-sm mb-2 flex items-center justify-between cursor-pointer border-b border-gray-300 pb-2 hover:text-gray-400">
             Home
           </Link>
 

@@ -1,12 +1,12 @@
 import { ShoppingCart, Heart } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Next.js Image component
+import Image from 'next/image';
 
 export default function ProductCard() {
   return (
     <>
       <Link href={'/product/iphone'}>
-        <div className="max-w-xs rounded-lg border border-gray-200 overflow-hidden transition-shadow duration-300 ease-in-out relative group">
+        <div className="max-w-xs rounded-lg border border-gray-100 overflow-hidden transition-shadow duration-300 ease-in-out relative group">
           <div className="relative">
             <Image
               src="/iphon.webp" 
@@ -24,8 +24,8 @@ export default function ProductCard() {
               </button>
             </div>
           </div>
-          <div className="p-4">
-            <h2 className="text-sm font-semibold text-primary-black">iPhone 16 Pro Max</h2>
+          <div className="p-3">
+            <h2 className="text-sm font-medium text-primary-black">iPhone 16 Pro Max</h2>
             <p className="text-xs text-gray-500">Apple, iPhone</p>
             <div className="flex space-x-2 my-2">
               <span className="w-4 h-4 rounded-full bg-[#d9c1a1] border border-gray-300"></span>
@@ -33,7 +33,10 @@ export default function ProductCard() {
               <span className="w-4 h-4 rounded-full bg-black border border-gray-300"></span>
               <span className="w-4 h-4 rounded-full bg-white border border-gray-300"></span>
             </div>
-            <p className="text-base font-bold text-blue-600">Rs. 514,900.00</p>
+            <div className='flex flex-row items-center space-x-1 gap-1'>
+              <p className="text-xs font-medium text-gray-400 line-through">Rs. 510,000.00</p>
+              <p className="text-xs font-bold text-blue-600">Rs. 514,900.00</p>
+            </div>
           </div>
         </div>
       </Link>

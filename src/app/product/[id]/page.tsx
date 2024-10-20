@@ -173,7 +173,7 @@ export default function Product() {
       </div>
 
       <p className="px-4 md:px-8 lg:px-14 font-semibold">You may also Like</p>
-      <div className="mx-auto px-4 md:px-8 lg:px-10 mt-4 mb-8">
+      <div className="mx-auto px-3 md:px-8 lg:px-10 mt-4 mb-8">
       <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={20}
@@ -181,6 +181,7 @@ export default function Product() {
             navigation={false}
             autoplay={{ delay: 3000 }}
             breakpoints={{
+              320: { slidesPerView: 2 },
               640: { slidesPerView: 3 }, 
               768: { slidesPerView: 3 },
               1024: { slidesPerView: 4 }, 
